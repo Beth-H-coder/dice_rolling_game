@@ -1,8 +1,15 @@
+import random
 
-# Loop
-# Question: roll the dice? 
-# If user enters y - generate and print 2 random nums 
-# If user enters n - print 'Thanks for playing!' and terminate program
-# Else print invalid choice
+while True:
+    choice = input('Roll the dice? (y/n): ').lower()
+    if choice == 'y':
+        num1 = random.randint(1,6)
+        num2 = random.randint(1,6)
+        print(f'{num1}, {num2}')
+    
+    elif choice == 'n':
+        print('Thanks for playing!')
+        break
 
-input("Roll the dice? (y/n)")
+    else: 
+        print("Sorry - invalid choice! You must select 'y' or 'n'")
